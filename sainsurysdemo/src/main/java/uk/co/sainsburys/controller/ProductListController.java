@@ -15,8 +15,7 @@ import com.google.gson.GsonBuilder;
 
 @Component
 @ComponentScan(value = "ProductListController")
-public class ProductListController
-{
+public class ProductListController {
 
     private static final Logger LOG = Logger.getLogger(ProductListController.class);
 
@@ -24,36 +23,29 @@ public class ProductListController
 
     private static Gson gson;
 
-    static
-    {
+    static {
         gson = new GsonBuilder().setPrettyPrinting().create();
     }
 
-    
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         ProductListController productListController = (ProductListController) ApplicationContextUtils.getApplicationContext().getBean(ProductListController.class);
         String result = productListController.getJsonString();
-        System.out.println(result);
+        LOG.info(result);
     }
-    
-    
-    protected List<ProductData> getProducts()
-    {
+
+    protected List<ProductData> getProducts() {
         return getProductFacade().getProducts();
     }
-    
-    public String getJsonString(){
+
+    public String getJsonString() {
         return gson.toJson(getProducts());
     }
 
-    public ProductFacade getProductFacade()
-    {
+    public ProductFacade getProductFacade() {
         return productFacade;
     }
 
-    public void setProductFacade(ProductFacade productFacade)
-    {
+    public void setProductFacade(ProductFacade productFacade) {
         this.productFacade = productFacade;
     }
 
