@@ -1,4 +1,4 @@
-This project is built with following libraries/tools/frameworks. Please note this is just to let you know th
+This project is built with following libraries/tools/frameworks. Please note this is just to let you know that I can work on some of below techniques
 
 a). Maven - Build framework
 
