@@ -33,6 +33,7 @@ Installation instructions
 	mvn package
 7. Verify you have sainsburysdemo.jar created at {project_root}/target
 8. Goto {projectPath} location in commandline
+
   java -cp target/sainsburysdemo.jar uk.co.sainsburys.controller.ProductListController
 
 
