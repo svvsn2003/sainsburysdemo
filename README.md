@@ -1,4 +1,4 @@
-This project is built with following libraries/tools/frameworks
+This project is built with following libraries/tools/frameworks. Please note this is just to let you know th
 
 a). Maven - Build framework
 
@@ -15,6 +15,7 @@ f). Mockito - Mock/behaviour tests
 e). Log4j - Logging info/debug
 
 f) JDK 1.7
+g) Git Hub - Versioning control
 
 Installation instructions
 
@@ -29,14 +30,17 @@ Installation instructions
 	mvn --version
 6. Go to the project down load location and rum
 	mvn package
-7. Goto {projectPath} location in commandline
-8. java -cp target/sainsburysdemo.jar uk.co.sainsburys.controller.ProductListController
+7. Verify you have sainsburysdemo.jar created at {project_root}/target
+8. Goto {projectPath} location in commandline
+  java -cp target/sainsburysdemo.jar uk.co.sainsburys.controller.ProductListController
 
-For your reference a packaged jar is already kept at {project_root}/sainsburysdemo.jar
-
-so you can download and run the above command directly
 
 NOTE:
-I have tried to use other HTML parsers like Jsoup & HTMLUnit etc. But these frameworks has some limitations on Java Script executions
+I have tried to use other browser less HTML parsers like Jsoup & HTMLUnit, Selenium HTMLUnitDriver etc. But these frameworks has some limitations on Java Script executions and which are not fitting for sainsburys web pages, as it requires JS enabled page loads.
 
 Sainisburs site requires Java Script to be enabled to load the content, so finally used Selenium web driver to get the content.
+
+Know issues:
+1. Due to time limitations not worked on all unit tests
+2. JSON total price is not calculated
+
